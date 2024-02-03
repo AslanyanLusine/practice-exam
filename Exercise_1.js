@@ -17,7 +17,7 @@ class Service{
             return response.json()
         })).then(data => {
             return data
-        })
+        }).catch((err)=> console.log("fetching error",err))
 
     }
 
