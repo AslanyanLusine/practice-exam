@@ -1,8 +1,8 @@
 
 const url = "https://jsonplaceholder.typicode.com/posts"
 class Service{
-    constructor(data){
-        this.data = data
+    constructor(){
+        
     }
     static getInstance(){
         if(!Service.instance){
@@ -29,21 +29,25 @@ class Service{
 
 const first = Service.getInstance()
 const second = Service.getInstance()
-console.log(first.fetchedData(url))
+console.log(first.getGropeddata("id"))
 
 
 
 
-Array.prototype.myGroup = function(key){
+
+
+Array.prototype.myGroup = function(keyWord){
     const obj = {};
     for (let x = 0; x < this.length; x++) {
-      const key = this[x][key];
+      const key = this[x][keyWord];
       if (obj[key]) {
         obj[key].push(this[x]);
       } else {
         obj[key] = [this[x]];
       }
     }
-    return objGroup;
+    return obj;
 
 }
+
+
