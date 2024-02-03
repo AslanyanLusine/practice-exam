@@ -34,7 +34,8 @@ const UserForm = (closeModal) => {
       .catch(error => console.error('Error deleting user:', error));
   };
 
-  const handleSubmit = (values, { resetForm }) => {
+  const handleSubmit = (values, { resetForm }) => {// in submit time it must be closed and
+                                                   // form must be cleaned, but that part didn't work
     axios.post(url, values)
       .then(response => {
         setUsers( [...users, response.data]);

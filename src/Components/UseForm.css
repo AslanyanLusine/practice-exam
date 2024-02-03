@@ -15,7 +15,7 @@
   
   form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
   
   label {
@@ -31,11 +31,9 @@
   }
   
   button {
-    background-color: #263626;
-    margin-left: 3px;
-    margin-right: 3px;
-    height: 35px;
-    width: 45px;
+    background-color: #110833;
+    margin:3px;
+    height: 100%;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -43,7 +41,7 @@
   }
   
   button:hover {
-    background-color: #6ca86f;
+    background-color: #0f3386;
   }
   
   ul {
@@ -73,4 +71,12 @@
   
   li button:hover {
     background-color: #ff4d4d;
+  }
+
+
+  textarea {
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
   }
