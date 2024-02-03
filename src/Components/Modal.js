@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import UserForm from './UseForm';
 import './Modal.css'
-const MyFormWithoutModal = () => {
+const Modal = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
- 
-   
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
   return (
@@ -16,7 +14,7 @@ const MyFormWithoutModal = () => {
     </div>
   );
 };
-export default MyFormWithoutModal;
+export default Modal;
 
 
 
