@@ -33,18 +33,17 @@ console.log(first.fetchedData(url))
 
 
 
-console.log()
-
-
-
 
 Array.prototype.myGroup = function(key){
-    const obj = {}
-    for(let i = 0; i < this.length; i++){
-        if(this[i].key === key){
-            obj[key] = {...obj}
-        }
+    const obj = {};
+    for (let x = 0; x < this.length; x++) {
+      const key = this[x][key];
+      if (obj[key]) {
+        obj[key].push(this[x]);
+      } else {
+        obj[key] = [this[x]];
+      }
     }
-    return obj
+    return objGroup;
 
 }
